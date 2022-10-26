@@ -32,13 +32,14 @@ let result = greatestProduct2([1, 2, 3, 4, 5, 5, 30]);
 console.log(result);
 
 
-// Finds highest pair product in 6 steps
+// Finds highest pair product in 6 steps, no repeat integers
 const greatestProduct3 = arr => {
     let highest = 0;
     let nextHighest = 0;
+    let newArr = arr.filter((a, b) => a - b);
     let steps = 0;
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < newArr.length; i++) {
         steps++;
         if (arr[i] > highest) {
             nextHighest = highest;
@@ -54,4 +55,4 @@ const greatestProduct3 = arr => {
 };
 
 
-console.log(greatestProduct3([1, 2, 3, 4, 5, 6]))
+console.log(greatestProduct3([1, 2, 3, 4, 5, 6, 6]))
