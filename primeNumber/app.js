@@ -1,10 +1,11 @@
-function isPrime(number) {
+let isPrime = (number) => {
 
     for (let i = 2; i <= number; i++) {
         if (number % i === 0) {
-            return false
+            return false;
+        } else {
+            return true;
         }
-        return true;
     }
 }
 

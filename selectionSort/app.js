@@ -1,6 +1,6 @@
 // Selection Sort in 20 Steps
 
-const selectionSort = arr => {
+const selectionSort = (arr) => {
     let steps = 0;
     for (let i = 0; i < arr.length - 1; i++) {
         steps++;
