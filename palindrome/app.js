@@ -11,6 +11,7 @@ isPalindrome1();
 
 
 // A faster and cleaner solution
+// A two-pointer approach
 const isPalindrome2 = (str) => {
     let newStr = str.toLowerCase().replace(/[\W_]/g, "");
     let left = 0;
