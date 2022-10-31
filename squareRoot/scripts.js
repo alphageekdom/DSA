@@ -18,4 +18,6 @@ const isSquareRoot = number => {
 };
 
 
-isSquareRoot();
+let test1 = 10
+
+console.log(isSquareRoot(test1));

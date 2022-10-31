@@ -1,24 +1,16 @@
-// Selection Sort in 20 Steps
-
-const selectionSort = (arr) => {
-    let steps = 0;
-    for (let i = 0; i < arr.length - 1; i++) {
-        steps++;
-        let lowestNumberIndex = i;
-        for (let j = i + 1; j < arr.length; j++) {
-            steps++;
-            if (arr[j] < arr[lowestNumberIndex]) {
-                lowestNumberIndex = j;
+const selectionSort = (array) => {
+    let copyArray = [...array];
+    let len = copyArray.length;
+    for (let i = 0; i < len - 1; i++) {
+        let lowestIndex = i;
+        for (let j = i + 1; j < len; j++) {
+            if (copyArray[j] < copyArray[lowestIndex]) {
+                lowestIndex = j;
             }
         }
-        if (lowestNumberIndex != i) {
-            let temp = arr[i];
-            arr[i] = arr[lowestNumberIndex];
-            arr[lowestNumberIndex] = temp;
-        }
+        [copyArray[i], copyArray[lowestIndex]] = [copyArray[lowestIndex], copyArray[i]];
     }
-    console.log(`Steps: ${steps}`)
-    return arr
+    return copyArray;
 };
 
 console.log(selectionSort([4, 2, 7, 1, 3]))
