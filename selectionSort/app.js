@@ -1,16 +1,17 @@
 const selectionSort = (array) => {
-    let copyArray = [...array];
-    let len = copyArray.length;
+    let sorted = [...array];
+    let len = sorted.length;
     for (let i = 0; i < len - 1; i++) {
         let lowestIndex = i;
-        for (let j = i + 1; j < len; j++) {
-            if (copyArray[j] < copyArray[lowestIndex]) {
+        for (let j = i; j < len; j++) {
+            if (sorted[j] < sorted[lowestIndex]) {
                 lowestIndex = j;
             }
         }
-        [copyArray[i], copyArray[lowestIndex]] = [copyArray[lowestIndex], copyArray[i]];
+        [sorted[i], sorted[lowestIndex]] =
+            [sorted[lowestIndex], sorted[i]];
     }
-    return copyArray;
+    return sorted;
 };
 
 console.log(selectionSort([4, 2, 7, 1, 3]))
