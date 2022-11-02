@@ -1,3 +1,4 @@
+// Has time complexity of O(n)
 const linearSearch = (array, target) => {
     // Loop the entire array
     for (let i = 0; i < array.length; i++) {

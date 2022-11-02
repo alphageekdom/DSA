@@ -1,3 +1,4 @@
+// Time Complexity of O(log n)
 function binarySearch(array, target) {
     let start = 0;
     let end = array.length - 1;
