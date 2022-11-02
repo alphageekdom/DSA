@@ -6,7 +6,7 @@ const linearSearch = (array, target) => {
             return i;
         }
     }
-    return null;
+    return false;
 };
 
 console.log(linearSearch([3, 17, 75, 80, 202], 22));
